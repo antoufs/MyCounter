@@ -8,6 +8,12 @@ Class {
 	#package : 'MyCounter'
 }
 
+{ #category : 'as yet unclassified' }
+Counter class >> startingAt: anInteger [
+
+	^ self new count: anInteger 
+]
+
 { #category : 'accessing' }
 Counter >> count [ 
 	
@@ -30,4 +36,11 @@ Counter >> decrement [
 Counter >> increment [ 
 	
 	count:= count + 1
+]
+
+{ #category : 'accessing' }
+Counter >> initialize [ 
+	
+	super initialize.
+	count := 0
 ]
